@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+
+</head>
+
+<body>
+    <%- include("../includes/nav.ejs")%>
+        <%- include('../includes/subnav.ejs') %>
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="menubox col col-2 border border-2 p-3" style="height: 600px; overflow: auto;">
+                        <%- include('./reactpagenav.ejs')%>
+                    </div>
+                    <div class=" col  border border-2" style="height: 600px; overflow: auto;">
+                        <div class="flex mb-10 flex-col gap-y-5 md:px-3 ">
+                            <!-- code starts here -->
+                            <div class="flex mb-10 flex-col gap-y-5 md:px-3 ">
+                                <h1 class="mt-5 pt-2 text-4xl">Components in react</h1>
+                                <p class="text-lg">imagine building a website like building a wall with bricks. Each
+                                    brick is like a component, a small self-contained piece that does one specific
+                                    thing. These wall bricks (components) can be put together in different ways to
+                                    create the entire website (UI).</p>
+                                <div class="flex flex-col">
+                                        <div class="mt-4 ">
+                                            <h2 class="text-2xl sm:text-3xl font-semibold" id="types-of-components">
+                                                Types of components:</h2>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="markdownMakeup max-w-full ">
+                                            <p>There are two types of components: <strong>functional</strong> and
+                                                <strong>class</strong> components. However, class components are not in
+                                                use anymore, as React has shifted its focus towards functional
+                                                components due to the introduction of React Hooks in version 16.8. Hooks
+                                                allow developers to use state and other React features without the need
+                                                for class components, which were previously the only way to create
+                                                stateful components.</p>
+                                            <p><strong>Class</strong> components relied on complex code involving the
+                                                <strong>this</strong> keyword and lifecycle methods, making them more
+                                                prone to bugs and harder to understand, especially for developers new to
+                                                React. With the release of Hooks, functional components became more
+                                                powerful and flexible, enabling developers to create stateful logic in a
+                                                more straightforward and reusable way.
+                                                Additionally, functional components are generally easier to
+                                                <strong>read, test, and maintain, leading to a better developer</strong>
+                                                experience. As a result, class components are now considered legacy, and
+                                                the React team recommends using functional components with Hooks for all
+                                                new code. Therefore, we are focusing only on functional components in
+                                                this discussion.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="mt-4 ">
+                                            <h2 class="text-xl sm:text-2xl font-medium" id="functional-component">
+                                                Functional component</h2>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="markdownMakeup max-w-full ">
+                                            <p>Functional component are defined as plain <strong>JavaScript</strong>
+                                                functions that return <strong>JSX</strong> (JavaScript XML) describing
+                                                the UI.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="mt-4 ">
+                                            <h3 class="text-lg sm:text-xl font-medium"
+                                                id="example-of-functional-component">Example of functional component
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class=" top-[74px] my-2">
+                                            <div class="w-full flex flex-col items-start markdownMakeup">
+                                                <div
+                                                    class="w-full flex flex-col items-start  relative rounded bg-opacity-10 border border-[rgba(128,121,121,0.3)] backdrop-blur-2xl border border-[rgba(128,121,121,0.3)] ">
+                                                    <div
+                                                        class="w-full rounded-t flex items-center gap-x-4 px-4 py-0  bg-[rgba(128,121,121,0.3)] ">
+
+                                                    <pre class=" text-white bg-black font-medium cursor-text !px-8 !bg-[#131516]  max-h-[600px] rounded-b"
+                                                        style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(171, 178, 191); background: transparent; font-size: 1rem; width: 100%;"><code class="language-cpp" style="white-space: pre;"><span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">1</span><span>
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">2</span><span></span><span>const</span><span> App = () =&gt; {
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">3</span><span>  </span><span >return</span><span> (
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">4</span>    &lt;div&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">5</span>      &lt;h1&gt;Welcome to the CodeGrow Guys! 😄&lt;/h1&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">6</span>    &lt;/div&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">7</span>  );
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">8</span>};
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">9</span>
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">10</span><span></span><span>export</span><span> </span><span>default</span><span> App;</span></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="markdownMakeup max-w-full ">
+                                            <p>As you can see in the above example, we have the <strong>App</strong>
+                                                component that returns an HTML div element with an h1.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="mt-4 ">
+                                            <h2 class="text-xl sm:text-2xl font-medium" id="nested-components">Nested
+                                                Components</h2>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="markdownMakeup max-w-full ">
+                                            <p>We can include another component in any component by using syntax like
+                                                this: &lt;Component name /&gt;.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="mt-4 ">
+                                            <h3 class="text-lg sm:text-xl font-medium" id="example">Example:</h3>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class=" top-[74px] my-2">
+                                            <div class="w-full flex flex-col items-start markdownMakeup">
+                                                <div
+                                                    class="w-full flex flex-col items-start  relative rounded bg-opacity-10 border border-[rgba(128,121,121,0.3)] backdrop-blur-2xl border border-[rgba(128,121,121,0.3)] ">
+                                                    <pre class=" text-white bg-black font-medium cursor-text !px-8 !bg-[#131516]  max-h-[600px] rounded-b"
+                                                        style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(171, 178, 191); background: transparent; font-size: 1rem; width: 100%;"><code class="language-cpp" style="white-space: pre;"><span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">1</span><span>
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">2</span><span></span><span>const</span><span> App = () =&gt; {
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">3</span><span>  </span><span>return</span><span> (
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">4</span>    &lt;div&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">5</span>      &lt;h1&gt;Welcome to the CodeGrow Mitro My name is Ritish Sharma! 😄&lt;/h1&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">6</span>      &lt;Navbar /&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">7</span>      &lt;Searchbar /&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">8</span>      &lt;Cards /&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">9</span>    &lt;/div&gt;
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">10</span>  );
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">11</span>};
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">12</span>
+<span class="comment linenumber react-syntax-highlighter-line-number" style="display: inline-block; min-width: 2.25em; padding-right: 1rem; text-align: right; user-select: none; font-size: 1rem; opacity: 0.5;">13</span><span></span><span>export</span><span> </span><span>default</span><span> App;</span></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="my-2" id="undefined">
+                                            <div
+                                                class="text-base px-3 py-6 rounded border-l-8 border-l-[#22a774] border-l-opacity-50 bg-[#22a774]/10">
+                                                <p>Note that the filename must start with an uppercase character.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- code ends here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include("../includes/footer.ejs")%>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

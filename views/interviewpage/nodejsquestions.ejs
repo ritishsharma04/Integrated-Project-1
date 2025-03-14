@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+    <style>
+        ol li a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <%- include("../includes/nav.ejs") %>
+    <%- include("../includes/interviewnav.ejs")%>
+    <!-- code starts here -->
+    <div class="container bg-white text-black p-4">
+        <h1 class="display-6 mb-4">Node.js Interview Questions</h1>
+        <p class="mb-4">Here are 15 commonly asked Node.js interview questions:</p>
+        
+        <h4 class="h4 text-primary mb-2">1. What is Node.js?</h4>
+        <p class="mb-4">Ans. Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to run JavaScript on the server side. It uses the V8 JavaScript engine and is designed for building scalable network applications.</p>
+        
+        <h4 class="h4 text-primary mb-2">2. What are the key features of Node.js?</h4>
+        <p class="mb-4">Ans. Key features of Node.js include non-blocking I/O, event-driven architecture, single-threaded model, and the ability to handle multiple connections simultaneously.</p>
+        
+        <h4 class="h4 text-primary mb-2">3. What is the difference between Node.js and JavaScript?</h4>
+        <p class="mb-4">Ans. JavaScript is a programming language primarily used for client-side scripting in web browsers, while Node.js is a runtime environment that allows JavaScript to be executed on the server side.</p>
+        
+        <h4 class="h4 text-primary mb-2">4. What is npm?</h4>
+        <p class="mb-4">Ans. npm (Node Package Manager) is the default package manager for Node.js. It allows developers to install, share, and manage dependencies for their Node.js applications.</p>
+        
+        <h4 class="h4 text-primary mb-2">5. What is the purpose of the `package.json` file?</h4>
+        <p class="mb-4">Ans. The `package.json` file is a JSON file that contains metadata about a Node.js project, including its dependencies, scripts, version, and other configurations.</p>
+        
+        <h4 class="h4 text-primary mb-2">6. What is middleware in Node.js?</h4>
+        <p class="mb-4">Ans. Middleware is a function that has access to the request and response objects in an Express application. It can modify the request, end the response, or call the next middleware function in the stack.</p>
+        
+        <h4 class="h4 text-primary mb-2">7. How does Node.js handle asynchronous operations?</h4>
+        <p class="mb-4">Ans. Node.js uses an event-driven, non-blocking I/O model to handle asynchronous operations. It uses callbacks, promises, and async/await syntax to manage asynchronous code execution.</p>
+        
+        <h4 class="h4 text-primary mb-2">8. What is the event loop in Node.js?</h4>
+        <p class="mb-4">Ans. The event loop is a core component of Node.js that allows it to perform non-blocking I/O operations. It continuously checks the event queue and executes the callbacks associated with events.</p>
+        
+        <h4 class="h4 text-primary mb-2">9. What are streams in Node.js?</h4>
+        <p class="mb-4">Ans. Streams are objects that allow reading and writing data in a continuous flow. Node.js provides various types of streams, including readable, writable, duplex, and transform streams.</p>
+        
+        <h4 class="h4 text-primary mb-2">10. What is the purpose of the `require()` function?</h4>
+        <p class="mb-4">Ans. The `require()` function is used to import modules in Node.js. It allows developers to include built-in modules, third-party modules, or custom modules in their applications.</p>
+        
+        <h4 class="h4 text-primary mb-2">11. What is the difference between `process.nextTick()` and `setImmediate()`?</h4>
+        <p class="mb-4">Ans. `process.nextTick()` schedules a callback to be invoked in the same phase of the event loop, while `setImmediate()` schedules a callback to be invoked in the next iteration of the event loop.</p>
+        
+        <h4 class="h4 text-primary mb-2">12. How can you handle errors in Node.js?</h4>
+        <p class="mb-4">Ans. Errors in Node.js can be handled using try-catch blocks for synchronous code, and by passing error objects to callback functions or using promises and async/await for asynchronous code.</p>
+        
+        <h4 class="h4 text-primary mb-2">13. What is clustering in Node.js?</h4>
+        <p class="mb-4">Ans. Clustering is a technique that allows you to create multiple instances of a Node.js application to take advantage of multi-core systems. It helps improve performance and scalability.</p>
+        
+        <h4 class="h4 text-primary mb-2">14. What is the purpose of the `http` module in Node.js?</h4>
+        <p class="mb-4">Ans. The `http` module in Node.js provides utilities to create HTTP servers and clients. It allows developers to handle HTTP requests and responses in their applications.</p>
+        
+        <h4 class="h4 text-primary mb-2">15. What is the difference between `spawn()` and `exec()` in Node.js?</h4>
+        <p class="mb-4">Ans. `spawn()` is used to launch a new process with a given command and allows for streaming data, while `exec()` runs a command in a shell and buffers the output, returning it as a callback.</p>
+    </div>
+    <!-- code ends here -->
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

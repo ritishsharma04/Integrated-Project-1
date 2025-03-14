@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading h1{
+    color:#2973B2 ;
+}
+
+.rolebasedroadmaps a{
+    text-decoration-line: none;
+    color: rgb(130, 129, 129);
+}
+
+.rolebasedroadmaps a:hover{
+    color: black;
+}
+

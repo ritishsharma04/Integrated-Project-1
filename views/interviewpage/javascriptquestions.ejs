@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+    <style>
+        ol li a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <%- include("../includes/nav.ejs") %>
+    <%- include("../includes/interviewnav.ejs")%>
+    <!-- code starts here -->
+    <div class="container bg-white text-black p-4">
+        <h1 class="display-6 mb-4">JavaScript Interview Questions</h1>
+        <p class="mb-4">16 top advanced Javascript interview questions</p>
+        
+        <h4 class="h4 text-primary mb-2">1. What is JavaScript?</h4>
+        <p class="mb-4">Ans. JavaScript is a high-level, dynamic, untyped, and interpreted programming language that is widely used for web development to create interactive effects within web browsers.</p>
+        
+        <h4 class="h4 text-primary mb-2">2. What are the data types supported by JavaScript?</h4>
+        <p class="mb-4">Ans. JavaScript supports several data types, including Undefined, Null, Boolean, Number, String, Symbol (introduced in ES6), and Object.</p>
+        
+        <h4 class="h4 text-primary mb-2">3. What is the difference between `==` and `===`?</h4>
+        <p class="mb-4">Ans. `==` is the equality operator that checks for value equality , while `===` is the strict equality operator that checks for both value and type equality without type coercion.</p>
+        
+        <h4 class="h4 text-primary mb-2">4. What is a closure in JavaScript?</h4>
+        <p class="mb-4">Ans. A closure is a function that retains access to its lexical scope, even when the function is executed outside that scope. It allows for data encapsulation and private variables.</p>
+        
+        <h4 class="h4 text-primary mb-2">5. What is the purpose of the `this` keyword in JavaScript?</h4>
+        <p class="mb-4">Ans. The `this` keyword refers to the context in which a function is called. It can refer to different objects depending on how the function is invoked (e.g., as a method, as a standalone function, etc.).</p>
+        
+        <h4 class="h4 text-primary mb-2">6. What are JavaScript Promises?</h4>
+        <p class="mb-4">Ans. Promises are objects that represent the eventual completion (or failure) of an asynchronous operation and its resulting value. They provide a cleaner alternative to callback functions for handling asynchronous code.</p>
+        
+        <h4 class="h4 text-primary mb-2">7. What is the difference between `let`, `const`, and `var`?</h4>
+        <p class="mb-4">Ans. `var` is function-scoped and can be redeclared, `let` is block-scoped and cannot be redeclared, while `const` is also block-scoped but must be initialized at the time of declaration and cannot be reassigned.</p>
+        
+        <h4 class="h4 text-primary mb-2">8. What is event delegation in JavaScript?</h4>
+        <p class="mb-4">Ans. Event delegation is a technique that involves attaching a single event listener to a parent element instead of multiple listeners to child elements. This improves performance and allows for dynamic elements to be handled.</p>
+        
+        <h4 class="h4 text-primary mb-2">9. What is the difference between synchronous and asynchronous programming?</h4>
+        <p class="mb-4">Ans. Synchronous programming executes tasks sequentially, blocking further execution until the current task is completed, while asynchronous programming allows tasks to run concurrently, enabling other operations to continue while waiting for a task to complete.</p>
+        
+        <h4 class="h4 text-primary mb-2">10. What are arrow functions in JavaScript?</h4>
+        <p class="mb-4">Ans. Arrow functions are a concise way to write function expressions in JavaScript. They do not have their own `this`, making them useful for preserving the context of `this` in callbacks.</p>
+        
+        <h4 class="h4 text-primary mb-2">11. What is the purpose of the `bind()` method?</h4>
+        <p class="mb-4">Ans. The `bind()` method creates a new function that, when called, has its `this` keyword set to a specified value, with a given sequence of arguments preceding any provided when the new function is called.</p>
+        
+        <h4 class="h4 text-primary mb-2">12. What is the difference between `null` and `undefined`?</h4>
+        <p class="mb-4">Ans. `null` is an assignment value that represents the intentional absence of any object value, while `undefined` indicates that a variable has been declared but has not yet been assigned a value.</p>
+        
+        <h4 class="h4 text-primary mb-2">13. What are template literals in JavaScript?</h4>
+        <p class="mb-4">Ans. Template literals are string literals that allow embedded expressions, multi-line strings, and string interpolation. They are enclosed by backticks (`` ` ``) instead of single or double quotes.</p>
+        
+        <h4 class="h4 text-primary mb-2">14. What is the purpose of the `setTimeout()` function?</h4>
+        <p class="mb-4">Ans. The `setTimeout()` function is used to execute a function or a block of code after a specified delay (in milliseconds). It is commonly used for creating delays in execution.</p>
+        
+        <h4 class="h4 text-primary mb-2">15. What is the difference between `call()` and `apply()` methods?</h4>
+        <p class="mb-4">Ans. Both `call()` and `apply()` are used to invoke functions with a specified `this` value. The difference is that `call()` takes arguments individually, while `apply()` takes an array of arguments.</p>
+    </div>
+    <!-- code ends here -->
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+    <style>
+        ol li a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <%- include("../includes/nav.ejs") %>
+    <%- include("../includes/interviewnav.ejs")%>
+    <!-- code starts here -->
+    <div class="container bg-white text-black p-4">
+        <h1 class="display-6 mb-4">MySQL Advanced Interview Questions</h1>
+        <p class="mb-4">16 recurring advanced MySQL interview questions</p>
+        
+        <h4 class="h4 text-primary mb-2">1. What is normalization, and why is it important in MySQL?</h4>
+        <p class="mb-4">Ans. Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. It involves dividing large tables into smaller ones and defining relationships between them.</p>
+        
+        <h4 class="h4 text-primary mb-2">2. What are the different types of joins in MySQL?</h4>
+        <p class="mb-4">Ans. The different types of joins in MySQL include INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN. Each join type defines how to combine rows from two or more tables based on a related column.</p>
+        
+        <h4 class="h4 text-primary mb-2">3. What is a stored procedure, and how is it different from a function in MySQL?</h4>
+        <p class="mb-4">Ans. A stored procedure is a precompiled collection of SQL statements that can be executed as a single unit. Unlike functions, stored procedures do not return a value and can perform operations such as modifying data.</p>
+        
+        <h4 class="h4 text-primary mb-2">4. How do you create an index in MySQL, and what are its benefits?</h4>
+        <p class="mb-4">Ans. An index in MySQL can be created using the CREATE INDEX statement. Indexes improve the speed of data retrieval operations by allowing the database to find rows more quickly without scanning the entire table.</p>
+        
+        <h4 class="h4 text-primary mb-2">5. What is the difference between clustered and non-clustered indexes?</h4>
+        <p class="mb-4">Ans. A clustered index determines the physical order of data in a table and can only be created on one column. A non-clustered index, on the other hand, creates a separate structure that points to the data, allowing multiple non-clustered indexes on a table.</p>
+        
+        <h4 class="h4 text-primary mb-2">6. What are transactions in MySQL, and what are their properties?</h4>
+        <p class="mb-4">Ans. Transactions in MySQL are sequences of operations performed as a single logical unit of work. The properties of transactions are known as ACID: Atomicity, Consistency, Isolation, and Durability.</p>
+        
+        <h4 class="h4 text-primary mb-2">7. How do you implement error handling in MySQL stored procedures?</h4>
+        <p class="mb-4">Ans. Error handling in MySQL stored procedures can be implemented using the DECLARE ... HANDLER statement. This allows you to define actions to take when specific errors occur during the execution of the procedure.</p>
+        
+        <h4 class="h4 text-primary mb-2">8. What is the purpose of the EXPLAIN statement in MySQL?</h4>
+        <p class="mb-4">Ans. The EXPLAIN statement is used to obtain information about how MySQL executes a query. It provides details about the query execution plan, including the order of table access, the type of join used, and the indexes applied.</p>
+        
+        <h4 class="h4 text-primary mb-2">9. What are triggers in MySQL, and how do they work?</h4>
+        <p class="mb-4">Ans. Triggers are special stored procedures that automatically execute in response to certain events on a table, such as INSERT, UPDATE, or DELETE operations. They can be used to enforce business rules or maintain data integrity.</p>
+        
+        <h4 class="h4 text-primary mb-2">10. How can you optimize a slow-running query in MySQL?</h4>
+        <p class="mb-4">Ans. To optimize a slow-running query, you can analyze the query execution plan using EXPLAIN, create appropriate indexes, avoid using SELECT *, limit the number of rows returned, and consider rewriting the query for better performance.</p>
+        
+        <h4 class="h4 text-primary mb-2">11. What is the difference between UNION and UNION ALL in MySQL?</h4>
+        <p class="mb-4">Ans. UNION combines the results of two or more SELECT statements and removes duplicate rows, while UNION ALL combines the results and includes all duplicates. UNION ALL is generally faster than UNION due to the lack of duplicate removal.</p>
+        
+        <h4 class="h4 text-primary mb-2">12. What are views in MySQL, and how are they different from tables?</h4>
+        <p class="mb-4">Ans. Views in MySQL are virtual tables that are based on the result of a SELECT query. Unlike tables, views do not store data physically; they provide a way to simplify complex queries and enhance security by restricting access to specific data.</p>
+        
+        <h4 class="h4 text-primary mb-2">13. How do you perform a backup and restore in MySQL?</h4>
+        <p class="mb-4">Ans. Backups in MySQL can be performed using the `mysqldump` command to create a dump file of the database. To restore, you can use the `mysql` command to import the dump file back into the database.</p>
+        
+        <h4 class="h4 text-primary mb-2">14. What is the purpose of the `GROUP BY` clause in MySQL?</h4>
+        <p class="mb-4">Ans. The `GROUP BY` clause is used to group rows that have the same values in specified columns into summary rows, often used with aggregate functions like COUNT, SUM, AVG, etc.</p>
+        
+        <h4 class="h4 text-primary mb-2">15. What are stored functions in MySQL, and how do they differ from stored procedures?</h4>
+        <p class="mb-4">Ans. Stored functions are similar to stored procedures but are designed to return a single value. They can be used in SQL statements, while stored procedures cannot be used in this way.</p>
+        
+        <h4 class="h4 text-primary mb-2">16. How do you implement full-text search in MySQL?</h4>
+        <p class="mb-4">Ans. Full-text search in MySQL can be implemented using FULLTEXT indexes. You can create a FULLTEXT index on one or more columns and use the MATCH() AGAINST() syntax to perform full-text searches.</p>
+        </div>
+    <!-- code ends here -->
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

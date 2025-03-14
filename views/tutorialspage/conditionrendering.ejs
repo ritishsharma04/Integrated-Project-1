@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional rendering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+
+</head>
+
+<body>
+    <%- include("../includes/nav.ejs")%>
+        <%- include('../includes/subnav.ejs') %>
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="menubox col col-2 border border-2 p-3" style="height: 600px; overflow: auto;">
+                        <%- include('./reactpagenav.ejs')%>
+                    </div>
+                    <div class=" col  border border-2" style="height: 600px; overflow: auto;">
+                        <div class="flex mb-10 flex-col gap-y-5 md:px-3 ">
+                            <!-- code starts here -->
+                            <div class=" text-dark">
+                                <div class="container mt-5">
+                                    <div class="mb-10">
+                                        <h1 class="h1">Conditional Rendering</h1>
+                                        <p class="lead">Conditional rendering in React allows developers to show or hide content based on certain conditions. This makes it easier to create dynamic and interactive user interfaces. In this article, we'll explore the basics of conditional rendering.</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h2 class="h3">Basics of Conditional Rendering:</h2>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h2 class="h4">Using the Ternary Operator:</h2>
+                                    </div>
+                                    <div class="alert alert-dark" role="alert">
+                                        <p>bool condition ? true content : false content</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p>The ternary operator is a concise way to conditionally render content in <strong>React</strong>. Consider the following example:</p>
+                                    </div>
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-secondary text-white">
+                                            <div class="d-flex align-items-center">
+                                                <!-- <div class="bg-danger rounded-circle" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-warning rounded-circle ms-2" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-success rounded-circle ms-2" style="width: 13px; height: 13px;"></div> -->
+                                                <div class="ms-auto">App.jsx</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body bg-dark text-light">
+                                            <pre><code>&lt;button onClick=&#123;show&#125;&gt;Show&lt;/button&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p>Here, the <strong>isLoggedIn</strong> bool variable determines whether to <strong>display a welcome message or a login button.</strong></p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h2 class="h4">Using the Logical && Operator:</h2>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p>The logical <strong>&amp;&amp;</strong> operator provides another elegant approach for <strong>simple conditions</strong>:</p>
+                                    </div>
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-secondary text-white">
+                                            <div class="d-flex align-items-center">
+                                                <!-- <div class="bg-danger rounded-circle" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-warning rounded-circle ms-2" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-success rounded-circle ms-2" style="width: 13px; height: 13px;"></div> -->
+                                                <div class="ms-auto">App.jsx</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body bg-dark text-light">
+                                            <pre><code>&lt;button onClick=&#123; () =&gt; show('true') &#125;&gt;Show&lt;/button&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p>The content inside the <strong>&amp;&amp;</strong> expression is rendered only <strong>if the specified condition is true.</strong></p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h2 class="h4">Conditional Rendering with State</h2>
+                                    </div>
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-secondary text-white">
+                                            <div class="d-flex align-items-center">
+                                                <!-- <div class="bg-danger rounded-circle" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-warning rounded-circle ms-2" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-success rounded-circle ms-2" style="width: 13px; height: 13px;"></div> -->
+                                                <div class="ms-auto">script.js</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body bg-dark text-light">
+                                            <pre><code>&lt;button onClick=&#123; (event) =&gt; show('true', event) &#125;&gt;Show&lt;/button&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p>In this example, the <strong>ToggleableText</strong> component maintains its own state <strong>isVisible</strong> using the <strong>useState</strong> hook. Clicking the "Toggle Text" button toggles the visibility of the text. If isVisible is true, it renders a paragraph with the text "This text is now visible!".</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h2 class="h4">Conditional Rendering with if Statements</h2>
+                                    </div>
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-secondary text-white">
+                                            <div class="d-flex align-items-center">
+                                                <!-- <div class="bg-danger rounded-circle" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-warning rounded-circle ms-2" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-success rounded-circle ms-2" style="width: 13px; height: 13px;"></div> -->
+                                                <div class="ms-auto">script.js</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body bg-dark text-light">
+                                            <pre><code>&lt;button onClick=&#123; (event) =&gt; show('true', event) &#125;&gt;Show&lt;/button&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p>In this example, the <strong>UserRole</strong> component receives a prop role indicating the user's role. Based on the value of <strong>role</strong>, it renders a different welcome message using <strong>if</strong> statements.</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h2 class="h4">Conditional Rendering in Lists</h2>
+                                    </div>
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-secondary text-white">
+                                            <div class="d-flex align-items-center">
+                                                <!-- <div class="bg-danger rounded-circle" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-warning rounded-circle ms-2" style="width: 13px; height: 13px;"></div>
+                                                <div class="bg-success rounded-circle ms-2" style="width: 13px; height: 13px;"></div> -->
+                                                <div class="ms-auto">script.js</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body bg-dark text-light">
+                                            <pre><code>&lt;button onClick=&#123; (event) =&gt; show('true', event) &#125;&gt;Show&lt;/button&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p>In this example, the <strong>TodoList</strong> component receives an array of <strong>todos</strong>. It maps over the <strong>todos</strong> array and renders each todo item as a list item. If a todo is completed (todo.completed is true), it renders the todo text with a <strong>strikethrough</strong> using <strong>&lt;del&gt;</strong>. Otherwise, it renders the todo text normally.</p>
+                                    </div>
+                                    <div class="w-100 border-bottom mb-4"></div>
+                                </div>
+                            </div>
+                            <!-- code ends here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include("../includes/footer.ejs")%>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/notes.css">
+</head>
+<body>
+    <%- include('includes/nav.ejs')%>
+
+    <div class="notes-container container">
+        <div class="notes-heading ">
+            <h1 class="h1 text-center mt-5 fw-bold" style="color: #2973B2;">Notes</h1>
+        </div>
+
+        <div class="notes">
+            <div class="notes1 notesbox">
+                <a href="https://drive.google.com/file/d/1qzgrYpYlgEUXq_kh08oyD0V3pDlNP2JO/view?usp=drivesdk">
+                    <div class="imagebox">
+                        <img src="img/html.png" alt="">
+                    </div>
+                    <div class="para">
+                        <p>HTML</p>
+                    </div>
+                </a>
+            </div>
+            <div class="notes1 notesbox">
+                <a href="https://drive.google.com/file/d/1ybbGPn8YWnr4Y4X3X4-yb8__gBTVUabu/view?usp=drivesdk">
+                    <div class="imagebox">
+                        <img src="img/css.png" alt="">
+                    </div>
+                    <p>CSS</p>
+                </a>
+            </div>
+            <div class="notes1 notesbox">
+                <a href="https://drive.google.com/file/d/10ETiLRE-MM9K5vIWSelRh4hmQA7k9XVQ/view?usp=drivesdk">
+                    <div class="imagebox">
+                        <img src="img/Javascript.png" alt="">
+                    </div>
+                    <p>Javascript</p>
+                </a>
+            </div>
+            <div class="notes1 notesbox">
+                <a href="">
+                    <div class="imagebox">
+                        <img src="img/nodejs.png" alt="">
+                    </div>
+                    <p>Node JS</p>
+                </a>
+            </div>
+            <div class="notes1 notesbox">
+                <a href="">
+                    <div class="imagebox">
+                        <img src="img/expressjs.png" alt="">
+                    </div>
+                    <p>Express Js</p>
+                </a>
+            </div>
+            <div class="notes1 notesbox">
+                <a href="">
+                    <div class="imagebox">
+                        <img src="img/mongodb.png" alt="">
+                    </div>
+                    <p>MongoDb</p>
+                </a>
+            </div>
+            <div class="notes1 notesbox">
+                <a href="">
+                    <div class="imagebox">
+                        <img width="60" height="60" src="img/cat7.png" alt="">
+                    </div>
+                    <p>My SQL</p>
+                </a>
+            </div>
+            <div class="notes1 notesbox">
+                <a href="https://drive.google.com/file/d/1riAi9f4GvGUeGNyYkMk4VWWT_4nRPEdK/view?usp=drivesdk">
+                    <div class="imagebox">
+                        <img src="img/git.png" alt="">
+                    </div>
+                    <p>Git</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <%- include ('includes/footer.ejs')%>
+</body>
+</html>

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.notes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+.notesbox{
+    padding: 0.3rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    margin: 0.5rem;
+}
+
+.notesbox a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 0.5rem; */
+    text-decoration-line: none;
+    color: #828181;
+}
+
+.notesbox a p{
+    margin-bottom: 0rem !important;
+}
+
+.imagebox{
+    padding: 0.3rem 0;
+}

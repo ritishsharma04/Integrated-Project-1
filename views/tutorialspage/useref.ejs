@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>useRef Hook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+
+</head>
+
+<body>
+    <%- include("../includes/nav.ejs")%>
+        <%- include('../includes/subnav.ejs') %>
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="menubox col col-2 border border-2 p-3" style="height: 600px; overflow: auto;">
+                        <%- include('./reactpagenav.ejs')%>
+                    </div>
+                    <div class=" col  border border-2" style="height: 600px; overflow: auto;">
+                        <div class="flex mb-10 flex-col gap-y-5 md:px-3 ">
+                            <!-- code starts here -->
+                            <div class="container mt-5">
+                                <div class="d-flex justify-content-between mt-5">
+                                    <h1 class="h1">React useRef</h1>
+                                </div>
+                                <div class="pt-2 min-vh-100">
+                                    <puseRef keeps the value stored between renders.&nbsp;</p>
+                                    <p>In this, value changed doesn't cause a re-render.&nbsp;</p>
+                                    <p>It can also be used to access a DOM element directly.&nbsp;</p>
+                                    <h2>Doesn't cause re-render</h2>
+                                    <div class="bg-black text-white  p-3 border rounded">
+                                        <pre><code>import &#123; useState, useRef &#125; from "react";
+                            import ReactDOM from "react-dom/client";
+                            
+                            function App() &#123;
+                              const [stateValue, setStateValue] = useState("");
+                              const refValue = useRef("");
+                            
+                              return (
+                                &lt;&gt;
+                                  &lt;h1&gt;Will cause a re-render:&lt;/h1&gt;
+                                  &lt;button onClick=&#123;() =&gt; &#123;setStateValue(Math.random())&#125;&#125;&gt;state&lt;/button&gt; : &#123;stateValue&#125;
+                                  
+                                  &lt;h1&gt;Will change but won't cause a re-render:&lt;/h1&gt;
+                                  &lt;button onClick=&#123;() =&gt; &#123;refValue.current=Math.random()&#125;&#125;&gt;ref&lt;/button&gt; : &#123;refValue.current&#125;
+                                &lt;/&gt;
+                              );
+                            &#125;
+                            
+                            const root = ReactDOM.createRoot(document.getElementById('root'));
+                            root.render(&lt;App /&gt;);</code></pre>
+                            </div>
+                                 
+                                    <p>In this, if you click onstate button,state will update and it will re-render, whereas if you click on ref , nothing visible will happen, i.e. ref  will change but it won't re-render. To verify this, you can again click on state , it will again update and re-render but this time ref  has some value stored, so that will display.&nbsp;</p>
+                                    <h2>Accessing DOM elements wit ref</h2>
+                                    <div class="bg-black text-white p-3 border rounded">
+                                        <pre><code>import &#123; useRef &#125; from "react";
+                            import ReactDOM from "react-dom/client";
+                            
+                            function App() &#123;
+                              const inputElement = useRef();
+                            
+                              const focusInput = () =&gt; &#123;
+                                inputElement.current.focus();
+                              &#125;;
+                            
+                              return (
+                                &lt;&gt;
+                                  &lt;input type="text" ref=&#123;inputElement&#125; /&gt;
+                                  &lt;button onClick=&#123;focusInput&#125;&gt;Focus Input&lt;/button&gt;
+                                &lt;/&gt;
+                              );
+                            &#125;
+                            
+                            const root = ReactDOM.createRoot(document.getElementById('root'));
+                            root.render(&lt;App /&gt;);</code></pre>
+                                    </div>
+                                    <p>In this, we initialized a useRef . In jsx, we used an attribute calle   to store reference, once we have reference then we can use it anyway we want.&nbsp;</p>
+                                </div>
+                        
+                            <!-- code ends here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include("../includes/footer.ejs")%>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

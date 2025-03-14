@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+    <style>
+        ol li a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <%- include("../includes/nav.ejs") %>
+    <%- include("../includes/interviewnav.ejs")%>
+    <!-- code starts here -->
+    <div class="container bg-white text-black p-4">
+        <h1 class="display-6 mb-4">Express.js Interview Questions</h1>
+        <p class="mb-4">16 frequently encountered advanced ExpressJs interview questions</p>
+        
+        <h4 class="h4 text-primary mb-2">1. What is Express.js?</h4>
+        <p class="mb-4">Ans. Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications. It simplifies the process of creating server-side applications.</p>
+        
+        <h4 class="h4 text-primary mb-2">2. What are the key features of Express.js?</h4>
+        <p class="mb-4">Ans. Key features of Express.js include routing, middleware support, template engines, error handling, and the ability to serve static files.</p>
+        
+        <h4 class="h4 text-primary mb-2">3. How do you create a simple Express.js application?</h4>
+        <p class="mb-4">Ans. A simple Express.js application can be created by installing Express using npm, requiring it in your JavaScript file, and defining routes using the `app.get()` method.</p>
+        
+        <h4 class="h4 text-primary mb-2">4. What is middleware in Express.js?</h4>
+        <p class="mb-4">Ans. Middleware in Express.js is a function that has access to the request and response objects. It can modify the request, end the response, or call the next middleware function in the stack.</p>
+        
+        <h4 class="h4 text-primary mb-2">5. How do you handle routes in Express.js?</h4>
+        <p class="mb-4">Ans. Routes in Express.js are defined using methods like `app.get()`, `app.post()`, `app.put()`, and `app.delete()`, which correspond to HTTP methods. Each route can have a callback function to handle requests.</p>
+        
+        <h4 class="h4 text-primary mb-2">6. What is the purpose of the `app.use()` method?</h4>
+        <p class="mb-4">Ans. The `app.use()` method is used to mount middleware functions at a specific path. It can be used for applying middleware globally or to specific routes.</p>
+        
+        <h4 class="h4 text-primary mb-2">7. How can you serve static files in Express.js?</h4>
+        <p class="mb-4">Ans. Static files can be served in Express.js using the `express.static()` middleware. You can specify the directory containing the static files, and Express will serve them automatically.</p>
+        
+        <h4 class="h4 text-primary mb-2">8. What is the difference between `app.get()` and `app.all()` in Express.js?</h4>
+        <p class="mb-4">Ans. `app.get()` is used to define a route that responds to GET requests, while `app.all()` is used to define a route that responds to all HTTP methods (GET, POST, PUT, DELETE, etc.).</p>
+        
+        <h4 class="h4 text-primary mb-2">9. How do you handle errors in Express.js?</h4>
+        <p class="mb-4">Ans. Errors in Express.js can be handled using error-handling middleware. You define a middleware function with four parameters (err, req, res, next) to catch and respond to errors.</p>
+        
+        <h4 class="h4 text-primary mb-2">10. What is the purpose of the `body-parser` middleware?</h4>
+        <p class="mb-4">Ans. The `body-parser` middleware is used to parse incoming request bodies in a middleware before your handlers, making the data available under `req.body`. It supports various content types, including JSON and URL-encoded data.</p>
+        
+        <h4 class="h4 text-primary mb-2">11. How can you implement route parameters in Express.js?</h4>
+        <p class="mb-4">Ans. Route parameters can be implemented in Express.js by defining routes with placeholders in the URL, such as `/users/:id`. The value of the parameter can be accessed using `req.params.id`.</p>
+        
+        <h4 class="h4 text-primary mb-2">12. What is the purpose of the `express.Router()`?</h4>
+        <p class="mb-4">Ans. The `express.Router()` is a class that allows you to create modular, mountable route handlers. It helps in organizing routes and middleware for different parts of an application.</p>
+        
+        <h4 class="h4 text-primary mb-2">13. How do you set up a template engine in Express.js?</h4>
+        <p class="mb-4">Ans. To set up a template engine in Express.js, you need to install the desired template engine (e.g., EJS, Pug), set the view engine using `app.set('view engine', 'engineName')`, and render views using `res.render()`.</p>
+        
+        <h4 class="h4 text-primary mb-2">14. What is CORS, and how can you enable it in Express.js?</h4>
+        <p class="mb-4">Ans. CORS (Cross-Origin Resource Sharing) is a security feature that allows or restricts resources from being requested from another domain. You can enable CORS in Express.js using the `cors` middleware.</p>
+        
+        <h4 class="h4 text-primary mb-2">15. How can you deploy an Express.js application?</h4>
+        <p class="mb-4">Ans. An Express.js application can be deployed on various platforms, such as Heroku, AWS, or DigitalOcean. You typically need to set up a server, configure environment variables, and use a process manager like PM2 for production.</p>
+    </div>
+    <!-- code ends here -->
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

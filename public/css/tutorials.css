@@ -1,0 +1,21 @@
+
+
+.container-fluid a{
+    color: white;
+    text-decoration: none;
+}
+
+.menudesc a{
+    display: block;
+    color: black;
+    width: 100%;
+}
+
+.boxes .h5{
+    color: #2973B2;
+}
+
+.footer{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+    <style>
+        ol li a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <%- include("../includes/nav.ejs") %>
+    <%- include("../includes/interviewnav.ejs")%>
+    <!-- code starts here -->
+    <div class="container bg-white text-black p-4">
+        <h1 class="display-6 mb-4">CSS Interview Questions</h1>
+        <p class="mb-4">Here are some commonly asked CSS interview questions:</p>
+        
+        <h4 class="h4 text-primary mb-2">1. What is CSS?</h4>
+        <p class="mb-4">Ans. CSS stands for Cascading Style Sheets. It is a stylesheet language used to describe the presentation of a document written in HTML or XML, including colors, layout, and fonts.</p>
+        
+        <h4 class="h4 text-primary mb-2">2. What are the different ways to apply CSS to a web page?</h4>
+        <p class="mb-4">Ans. CSS can be applied in three ways: inline styles, internal styles (within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section), and external styles (linking to a separate CSS file using a <code>&lt;link&gt;</code> tag).</p>
+        
+        <h4 class="h4 text-primary mb-2">3. What is the CSS Box Model?</h4>
+        <p class="mb-4">Ans. The CSS Box Model describes the rectangular boxes generated for elements in the document tree and consists of margins, borders, padding, and the actual content area.</p>
+        
+        <h4 class="h4 text-primary mb-2">4. What is the difference between class selectors and ID selectors in CSS?</h4>
+        <p class="mb-4">Ans. Class selectors are defined with a dot (.) and can be applied to multiple elements, while ID selectors are defined with a hash (#) and should be unique within a page, applied to a single element.</p>
+        
+        <h4 class="h4 text-primary mb-2">5. What are CSS preprocessors? Can you name a few?</h4>
+        <p class="mb-4">Ans. CSS preprocessors are scripting languages that extend CSS with variables, nested rules, and functions. Some popular CSS preprocessors include SASS, LESS, and Stylus.</p>
+        
+        <h4 class="h4 text-primary mb-2">6. What is Flexbox in CSS?</h4>
+        <p class="mb-4">Ans. Flexbox, or the Flexible Box Layout, is a CSS layout model that allows for the design of complex layouts with ease. It provides a more efficient way to lay out, align, and distribute space among items in a container.</p>
+        
+        <h4 class="h4 text-primary mb-2">7. What is the difference between relative and absolute positioning in CSS?</h4>
+        <p class="mb-4">Ans. Relative positioning moves an element relative to its normal position, while absolute positioning removes the element from the document flow and positions it relative to its nearest positioned ancestor.</p>
+        
+        <h4 class="h4 text-primary mb-2">8. What are media queries in CSS?</h4>
+        <p class="mb-4">Ans. Media queries are a feature of CSS that allows the application of styles based on the device's characteristics, such as screen size, resolution, and orientation. They are commonly used for responsive design.</p>
+        
+        <h4 class="h4 text-primary mb-2">9. What is the purpose of the z-index property in CSS?</h4>
+        <p class="mb-4">Ans. The z-index property controls the vertical stacking order of elements that overlap. Elements with a higher z-index value are displayed in front of those with a lower value.</p>
+        
+        <h4 class="h4 text-primary mb-2">10. What is the difference between "display: none" and "visibility: hidden"?</h4>
+        <p class="mb-4">Ans. "display: none" removes the element from the document flow, meaning it takes up no space, while "visibility: hidden" hides the element but still occupies space in the layout.</p>
+    </div>
+    <!-- code ends here -->
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>
