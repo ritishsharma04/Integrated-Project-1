@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java(oops)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <%- include('../includes/subnav.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="menubox col col-2 border border-2 p-3" style="height: 600px; overflow: auto;">
+                <%- include('./javanav.ejs') %>
+            </div>
+            <div class="col  border border-2" style="height: 600px; overflow: auto;">
+                <!-- code starts here -->
+<div class="container mb-5">
+    <h1 class="h1 mt-5 pt-2">Encapsulation</h1>
+    <p class="">Object-Oriented Programming (OOP) is a paradigm that uses objects and classes to create models based on the real world. The four fundamental principles of OOP are encapsulation, abstraction, inheritance, and polymorphism. These pillars help in designing robust and maintainable software systems.</p>
+
+    <div class="mt-4">
+        <h2 class="h1" id="definition">Definition</h2>
+        <p>Encapsulation is a fundamental concept in object-oriented programming (OOP) that binds together the data (attributes) and the code (methods) that manipulates the data into a single unit, known as a class. It restricts direct access to some of an object's components, which can prevent the accidental modification of data. This concept is often referred to as "data hiding."</p>
+    </div>
+
+    <div class="mt-4">
+        <h2 class="h1">Key Characteristics of Encapsulation</h2>
+        <ol>
+            <li><strong>Data Hiding:</strong> By restricting access to certain details of an object, encapsulation helps protect the integrity of the data. This is typically achieved by using access modifiers like private, protected, and public.</li>
+            <li><strong>Modularity:</strong> Encapsulation allows a class to be self-contained, which makes it easier to manage and modify without affecting other parts of the code.</li>
+            <li><strong>Control:</strong> By providing controlled access to the data through methods, encapsulation allows you to enforce certain rules on how the data is accessed or modified.</li>
+        </ol>
+        <p>The goal of Encapsulation is to implement class in a way that prevents unauthorized access to or modification of the original contents of a class by its instances (Objects). The underlying algorithm of one class need not be known to other classes.</p>
+    </div>
+
+    <div class="alert alert-info">
+        <p>Consider a real-world example of a capsule. The medicine inside a capsule is protected by the outer shell, preventing it from being tampered with. Similarly, in programming, encapsulation protects the data inside an object, allowing controlled access through defined methods.</p>
+    </div>
+
+    <div class="mt-4">
+        <h2 class="h1" id="access-modifiers">Access Modifiers</h2>
+        <p>Encapsulation in Java is implemented using classes and access modifiers:</p>
+        <ul>
+            <li><strong>Private:</strong> Members (variables or methods) declared as private are accessible only within the same class.</li>
+            <li><strong>Public:</strong> Members declared as public are accessible from any other class.</li>
+            <li><strong>Protected:</strong> Members declared as protected are accessible within the same package or subclasses in different packages.</li>
+        </ul>
+    </div>
+
+    <div class="mt-4">
+        <h2 class="h2 font-weight-semibold" id="perfect-encapsulation">Perfect Encapsulation</h2>
+        <p>Perfect encapsulation in object-oriented programming (OOP) refers to the practice of fully protecting an object's state from unintended or unauthorized access and modification. This is achieved by making all the object's fields private and providing public getter and setter methods to access and update those fields. This ensures that the object's internal state can only be modified in a controlled manner, maintaining data integrity and consistency.</p>
+    </div>
+
+    <div class="mt-4">
+        <h2 class="h2 font-weight-semibold" id="benefits-of-encapsulation">Benefits of Encapsulation</h2>
+        <p><strong>1 Improved Data Security:</strong> By hiding the internal state of an object and requiring all interaction to occur through methods, encapsulation protects the object's state from being corrupted by unintended modifications.</p>
+        <p><strong>2 Enhanced Maintainability:</strong> Encapsulation makes it easier to change the implementation of a class without affecting other parts of the program that depend on it. Only the class's methods need to be modified, while the external interface remains unchanged.</p>
+        <p><strong>3 Code Reusability:</strong> Encapsulation promotes the reuse of code by creating self-contained classes that can be easily incorporated into different programs.</p>
+        <p><strong>4 Simplified Complexity:</strong> By keeping the internal workings of a class hidden, encapsulation simplifies the complexity of the software system. Users of the class do not need to understand its internal implementation, only its public interface.</p>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="pt-2">
+        <p>To encapsulate something is to enclose something, in our case, we encapsulate or wrap data into a single unit essentially binding the data and code together.</p>
+        
+        <h3 class="h1">Get and set methods:</h3>
+        <p>We use set method to set value of variable and get method to get the value of variable.</p>
+        <p><strong>Example:</strong></p>
+        
+                <pre class="bg-black text-white language-java"><code class="language-java">// filename: Example6.java
+public class Example6 {
+    private String name; 
+    private int age; 
+
+    // Getter Methods
+    public String getName() {
+        return name;
+    }
+    public int getAge() {
+        return age;
+    }
+
+    // Setter Methods
+    public void setName(String newName) {
+        this.name = newName;
+    }
+    public void setAge(int newAge) {
+        this.age = newAge;
+    }
+}</code></pre>
+
+        <p>Here we have get method that takes values of variables and set method that assigns arguments as values to these variables.</p>
+        
+                <pre class="bg-black text-white language-java"><code class="language-java">//Filename: Example5.java
+public class Example5 {
+    public static void main(String[] args) {
+        Example6 ex6 = new Example6();
+        ex6.setName("Pranav");
+        ex6.setAge(21);
+        System.out.println("Name: " + ex6.getName());
+        System.out.println("Age: " + ex6.getAge());
+    }
+}</code></pre>
+
+        <p>Here, we make object of class Example6. Let’s run this file.</p>
+        <p>Output:</p>
+        
+                <pre class="bg-black text-white language-markup"><code class="language-markup">Name: Pranav
+Age: 21</code></pre>
+    </div>
+</div>
+
+                <!-- code ends here -->
+            </div>
+        </div>
+    </div>
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

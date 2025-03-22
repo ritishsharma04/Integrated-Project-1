@@ -38,19 +38,19 @@
                                     <div class="bg-black text-white p-3 border rounded">
                                         <pre><code>import &#123; useState &#125; from 'react';
                             
-                            function Form() &#123;
-                              const [email, setEmail] = useState('');
-                            
-                              return (
-                                &lt;form&gt;
-                                  &lt;label&gt;
-                                    Enter your email: &lt;input type="email" value=&#123;email&#125; onChange=&#123;(e) =&gt; setEmail(e.target.value)&#125; /&gt;
-                                  &lt;/label&gt;
-                                &lt;/form&gt;
-                              );
-                            &#125;
-                            
-                            export default Form;</code></pre>
+function Form() &#123;
+  const [email, setEmail] = useState('');
+
+  return (
+    &lt;form&gt;
+      &lt;label&gt;
+        Enter your email: &lt;input type="email" value=&#123;email&#125; onChange=&#123;(e) =&gt; setEmail(e.target.value)&#125; /&gt;
+      &lt;/label&gt;
+  
+  );
+&#125;
+
+export default Form;</code></pre>
                                     </div>
                                     <h2>&nbsp;</h2>
                                     <h2>Submitting Form</h2>
@@ -58,25 +58,25 @@
                                     <div class="bg-black text-white p-3 border rounded">
                                         <pre><code>import &#123; useState &#125; from 'react';
                             
-                            function Form() &#123;
-                              const [email, setEmail] = useState('');
-                            
-                              const handleSubmit = (e) =&gt; &#123;
-                                e.preventDefault();
-                                alert(`Your email is: &#123;email&#125;`);
-                              &#125;
-                            
-                              return (
-                                &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
-                                  &lt;label&gt;
-                                    Enter your email: &lt;input type="email" value=&#123;email&#125; onChange=&#123;(e) =&gt; setEmail(e.target.value)&#125; /&gt;
-                                  &lt;/label&gt;
-                                  &lt;input type="submit" /&gt;
-                                &lt;/form&gt;
-                              );
-                            &#125;
-                            
-                            export default Form;</code></pre>
+function Form() &#123;
+  const [email, setEmail] =
+
+  const handleSubmit = (e) =&gt; &#123;
+    e.preventDefault();
+    alert(`Your email is: &#123;email&#125;`);
+  &#125;
+
+  return (
+    &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
+      &lt;label&gt;
+        Enter your email: &lt;input type="email" value=&#123;email&#125; onChange=&#123;(e) =&gt; setEmail(e.target.value)&#125; /&gt;
+      &lt;/label&gt;
+      &lt;input type="submit" /&gt;
+    &lt;/form&gt;
+  );
+&#125;
+
+export default Form;</code></pre>
                                     </div>
                                     <p>&nbsp;</p>
                                     <h2>Multiple Inputs</h2>
@@ -84,32 +84,32 @@
                                     <div class="bg-black text-white p-3 border rounded">
                                         <pre><code>import &#123; useState &#125; from 'react';
                             
-                            function Form() &#123;
-                              const [data, setData] = useState(&#123;&#125;);
-                            
-                              const handleChange = (e) =&gt; &#123;
-                                setData(&#123;...data, [e.target.name]: e.target.value&#125;);
-                              &#125;
-                            
-                              const handleSubmit = (e) =&gt; &#123;
-                                e.preventDefault();
-                                alert(`Your email is: &#123;data.email&#125; and your name is: &#123;data.name&#125;`);
-                              &#125;
-                            
-                              return (
-                                &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
-                                  &lt;label&gt;
-                                    Enter your email: &lt;input type="email" name='email' value=&#123;data.email&#125; onChange=&#123;handleChange&#125; /&gt;
-                                  &lt;/label&gt;
-                                  &lt;label&gt;
-                                    Enter your name: &lt;input type="text" name='name' value=&#123;data.name&#125; onChange=&#123;handleChange&#125; /&gt;
-                                  &lt;/label&gt;
-                                  &lt;input type="submit" /&gt;
-                                &lt;/form&gt;
-                              );
-                            &#125;
-                            
-                            export default Form;</code></pre>
+function Form() &#123;
+  const [data, setData] = useState(&#123;&#125;);
+
+  const handleChange = (e) =&gt; &#123;
+    setData(&#123;...data, [e.target.name]: e.target.value&#125;);
+  &#125;
+
+  const handleSubmit = (e) =&gt; &#123;
+    e.preventDefault();
+    alert(`Your email is: &#123;data.email&#125; and your name is: &#123;data.name&#125;`);
+  &#125;
+
+  return (
+    &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
+      &lt;label&gt;
+        Enter your email: &lt;input type="email" name='email' value=&#123;data.email&#125; onChange=&#123;handleChange&#125; /&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        Enter your name: &lt;input type="text" name='name' value=&#123;data.name&#125; onChange=&#123;handleChange&#125; /&gt;
+      &lt;/label&gt;
+      &lt;input type="submit" /&gt;
+    &lt;/form&gt;
+  );
+&#125;
+
+export default Form;</code></pre>
                                     </div>
                                     <p>H handle  we used <strong>Spread Operators</strong>. We are basically saying keep whole data as it was, just change this name's value. Then it is saved as an object so we are getting t data dat .&nbsp;</p>
                                 </div>

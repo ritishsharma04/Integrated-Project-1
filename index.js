@@ -56,7 +56,6 @@ app.get('/roadmaps/roadmap',(req,res)=>{
     name=name.charAt(0).toUpperCase() + name.slice(1)
     width=parseInt(width);;
     res.render("roadmapforskills.ejs",{name,imagelink,width,height});
-    // res.send('working');
 });
 
 app.post("/contact",(req,res)=>{
@@ -176,5 +175,25 @@ app.get('/tutorials/useref',(req,res)=>{
 app.get('/tutorials/datafetching',(req,res)=>{
     res.render('./tutorialspage/datafetching.ejs');
 })
+
+//java page
+app.get('/tutorials/java',(req,res)=>{
+    res.render('./tutorialspage2/mainpage.ejs');
+});
+app.get('/tutorials/objectsinjava',(req,res)=>{
+    res.render('./tutorialspage2/objectinjava.ejs');
+});
+app.get('/tutorials/encapsulationinjava',(req,res)=>{
+    res.render('./tutorialspage2/encapsulationinjava.ejs');
+});
+app.get('/tutorials/inheritanceinjava',(req,res)=>{
+    res.render('./tutorialspage2/inheritanceinjava.ejs');
+});
+app.get('/tutorials/polymorphisminjava',(req,res)=>{
+    res.render('./tutorialspage2/polymorphisminjava.ejs');
+});
+app.get('/tutorials/abstractioninjava',(req,res)=>{
+    res.render('./tutorialspage2/abstractioninjava.ejs');
+});
 
 

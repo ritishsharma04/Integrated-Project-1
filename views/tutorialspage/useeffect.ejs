@@ -38,63 +38,62 @@
                                     <div class="text-white bg-black p-3 border rounded">
                                         <pre><code>import &#123; useState, useEffect &#125; from "react";
                             
-                            function Home() &#123;
-                              const [count, setCount] = useState(0);
-                            
-                              useEffect(() => &#123;
-                                setTimeout(() => &#123;
-                                  setCount((count) => count + 1);
-                                &#125;, 1000);
-                              &#125;);
-                            
-                              return &lt;h1&gt;I have rendered &#123;count&#125; times!&lt;/h1&gt;;
-                            &#125;
-                            
-                            export default Home;</code></pre>
+function Home() &#123;
+  const [count, setCount] = useState(0);
+
+  useEffect(() => &#123;
+    setTimeout(() => &#123;
+      setCount((count) 
+    &#125;, 1000);
+  &#125;);
+
+  return &lt;h1&gt;I have rendered &#123;count&#125; times!&lt;/h1&gt;;
+&#125;
+
+export default Home;</code></pre>
                                     </div>
                                     <p><strong>Runs on first render:</strong></p>
                                     <div class="text-white bg-black p-3 border rounded">
                                         <pre><code>import &#123; useState, useEffect &#125; from "react";
                             
-                            function Home() &#123;
-                              const [count, setCount] = useState(0);
-                            
-                              useEffect(() => &#123;
-                                setTimeout(() => &#123;
-                                  setCount((count) => count + 1);
-                                &#125;, 1000);
-                              &#125;, []);
-                            
-                              return &lt;h1&gt;I have rendered &#123;count&#125; times!&lt;/h1&gt;;
-                            &#125;
-                            
-                            export default Home;</code></pre>
+function Home() &#123;
+  const [count, setCount] =
+  useEffect(() => &#123;
+    setTimeout(() => &#123;
+      setCount((count) => count + 1);
+    &#125;, 1000);
+  &#125;, []);
+
+  return &lt;h1&gt;I have rendered &#123;count&#125; times!&lt;/h1&gt;;
+&#125;
+
+export default Home;</code></pre>
                                     </div>
                                     <p><strong>Runs when data changes:</strong></p>
                                     <div class="text-white bg-black p-3 border rounded">
                                         <pre><code>import &#123; useState, useEffect &#125; from "react";
                             
-                            function Home() &#123;
-                              const [count, setCount] = useState(0);
-                              const [data, setData] = useState('');
-                            
-                              const handleChange = (e) => &#123;
-                                setData(e.target.value);
-                              &#125;
-                            
-                              useEffect(() => &#123;
-                                setCount((count) => count + 1);
-                              &#125;, [data]);
-                            
-                              return (
-                                &lt;&gt;
-                                  &lt;input onChange=&#123;handleChange&#125; value=&#123;data&#125; /&gt;
-                                  &lt;p&gt;&#123;count&#125;&lt;/p&gt;
-                                &lt;/&gt;
-                              );
-                            &#125;
-                            
-                            export default Home;</code></pre>
+function Home() &#123;
+  const [count, setCount] = useState(0);
+  const [data, setData] = useState('');
+
+  const handleChange = (e) => &#123;
+    setData(e.target.value);
+  &#125;
+
+  useEffect(() => &#123;
+    setCount((count) => count + 1);
+  &#125;, [data]);
+
+  return (
+    &lt;&gt;
+      &lt;input onChange=&#123;handleChange&#125; value=&#123;data&#125; /&gt;
+      &lt;p&gt;&#123;count&#125;&lt;/p&gt;
+    &lt;/&gt;
+  );
+&#125;
+
+export default Home;</code></pre>
                                     </div>
                                 </div>
                             </div>

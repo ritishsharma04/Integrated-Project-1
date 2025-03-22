@@ -38,25 +38,25 @@
                                     <h2>Doesn't cause re-render</h2>
                                     <div class="bg-black text-white  p-3 border rounded">
                                         <pre><code>import &#123; useState, useRef &#125; from "react";
-                            import ReactDOM from "react-dom/client";
-                            
-                            function App() &#123;
-                              const [stateValue, setStateValue] = useState("");
-                              const refValue = useRef("");
-                            
-                              return (
-                                &lt;&gt;
-                                  &lt;h1&gt;Will cause a re-render:&lt;/h1&gt;
-                                  &lt;button onClick=&#123;() =&gt; &#123;setStateValue(Math.random())&#125;&#125;&gt;state&lt;/button&gt; : &#123;stateValue&#125;
-                                  
-                                  &lt;h1&gt;Will change but won't cause a re-render:&lt;/h1&gt;
-                                  &lt;button onClick=&#123;() =&gt; &#123;refValue.current=Math.random()&#125;&#125;&gt;ref&lt;/button&gt; : &#123;refValue.current&#125;
-                                &lt;/&gt;
-                              );
-                            &#125;
-                            
-                            const root = ReactDOM.createRoot(document.getElementById('root'));
-                            root.render(&lt;App /&gt;);</code></pre>
+import ReactDOM from "react-dom/client";
+
+function App() &#123;
+  const [stateValue, setStateValue] = useState("");
+  const refValue = useRef("");
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;Will cause a re-render:&lt;/h1&gt;
+      &lt;button onClick=&#123;() =&gt; &#123;setStateValue(Math.random())&#125;&#125;&gt;state&lt;/button&gt; : &#123;stateValue&#125;
+      
+      &lt;h1&gt;Will change but won't cause a re-render:&lt;/h1&gt;
+      &lt;button onClick=&#123;() =&gt; &#123;refValue.current=Math.random()&#125;&#125;&gt;ref&lt;/button&gt; : &#123;refValue.current&#125;
+    &lt;/&gt;
+  );
+&#125;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(&lt;App /&gt;);</code></pre>
                             </div>
                                  
                                     <p>In this, if you click onstate button,state will update and it will re-render, whereas if you click on ref , nothing visible will happen, i.e. ref  will change but it won't re-render. To verify this, you can again click on state , it will again update and re-render but this time ref  has some value stored, so that will display.&nbsp;</p>

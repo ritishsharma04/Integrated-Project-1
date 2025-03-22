@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java(oops)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <%- include('../includes/subnav.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="menubox col col-2 border border-2 p-3" style="height: 600px; overflow: auto;">
+                <%- include('./javanav.ejs') %>
+            </div>
+            <div class="col  border border-2" style="height: 600px; overflow: auto;">
+                <!-- code starts here -->
+                <div class="container-fluid pt-2 text-gray-200">
+                    <h1 class="mt-5 pt-1">Abstraction</h1>
+                    <p>Data abstraction refers to the process of hiding low-level details and only displaying important information. The abstract keyword is used to declare abstract classes. Abstract classes can have abstract and non-abstract methods.</p>
+                    <p><strong>Abstraction is achieved with the help of abstract classes and interfaces:</strong></p>
+                    
+                    <h3>i. Abstract Classes and Abstract Methods:</h3>
+                    <p>Abstraction can be implemented only if we inherit the class from another class.</p>
+                    <p>Inside the abstract class, when we create an abstract method, we use a semicolon (;) instead of curly brackets ({}).</p>
+                    <p><strong>Example:</strong></p>
+                    
+                    <pre class="bg-dark text-white p-3 border rounded">
+<code class="language-java">
+    abstract class Fruits {
+        public abstract void taste();
+        public void eat() {
+            System.out.println("Let's eat Fruits.");
+        }
+    }
+    
+    class Mango extends Fruits {
+        public void taste() {
+            System.out.println("Mango is sweet.");
+        }
+    }
+    
+    
+    public class Example3 {
+        public static void main(String[] args) {
+            Mango m = new Mango();
+            m.eat();
+            m.taste();
+        }
+    }        
+</code>
+                    </pre>
+                    
+                    <p>Output:</p>
+                    <pre class="bg-dark text-white p-3 border rounded">
+<code>
+    Let's eat Fruits.
+    Mango is sweet.
+</code>
+                    </pre>
+                    
+                    <p>We have an abstract class Fruits that has an abstract method taste() and a regular method eat(). We cannot directly create an object of the fruit class.</p>
+                    <p>First, we inherit methods of the fruit class into the Mango class and access the abstract method through it.</p>
+                    <p>Lastly, we create an object of the inherited class to use the abstract methods.</p>
+                    <p>Thus we can see that the implementation of the class can be kept hidden from the end user.</p>
+                    
+                    <h3>ii. Interfaces</h3>
+                    <p>Interface in Java is mainly used to achieve abstraction. We use the implements keyword to implement an interface.</p>
+                    <p><strong>Example:</strong></p>
+                    
+                    <pre class="bg-dark text-white p-3 border rounded">
+<code class="language-java">
+    interface Fruits {
+        public abstract void taste();
+        public void eat();
+    }
+    
+    class Mango extends Fruits {
+        
+        public void taste() {
+            System.out.println("Mango is sweet.");
+        }
+        
+        public void eat() {
+            System.out.println("Let's eat Fruits.");
+        }
+    }
+    
+    public class Example4 {
+        public static void main(String[] args) {
+            Mango m = new Mango();
+            m.eat();
+            m.taste();
+        }
+    }    
+</code>
+                    </pre>
+                    
+                    <p>Output:</p>
+                    <pre class="bg-dark text-white p-3 border rounded">
+<code>
+    Let's eat Fruits.
+    Mango is sweet.
+</code>
+                    </pre>
+                    
+                    <p>As we can see, implementing an interface is not that different from creating an abstract class and method. <strong>So what is the main difference between an abstract class and an interface?</strong></p>
+                    
+                    <table class="table table-bordered">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Abstract Class</th>
+                                <th>Interface</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>abstract keyword is used to create an abstract class.</td>
+                                <td>interface keyword is used to create an interface.</td>
+                            </tr>
+                            <tr>
+                                <td>Abstract class is implemented using <strong>extends</strong> keyword.</td>
+                                <td>Interface is implemented using <strong>implements</strong> keyword.</td>
+                            </tr>
+                            <tr>
+                                <td>Can extend another class or interface.</td>
+                                <td>Can only extend an interface.</td>
+                            </tr>
+                            <tr>
+                                <td>Can provide implementation of interface.</td>
+                                <td>Cannot provide implementation of interface.</td>
+                            </tr>
+                            <tr>
+                                <td>Does not support multiple inheritance.</td>
+                                <td>Supports multiple inheritance.</td>
+                            </tr>
+                            <tr>
+                                <td>Has abstract and non-abstract methods.</td>
+                                <td>Has default, static, and abstract methods.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- code ends here -->
+            </div>
+        </div>
+    </div>
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>
