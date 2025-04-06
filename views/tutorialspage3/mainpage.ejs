@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java(oops)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tutorials.css">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <%- include('../includes/subnav.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="menubox col col-2 border border-2 p-3" style="height: 600px; overflow: auto;">
+               <%- include('./phpnav.ejs')%>
+            </div>
+            <div class="col  border border-2" style="height: 600px; overflow: auto;">
+                <!-- code starts here -->
+
+                    <div class="container my-5">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="h1 text-dark mb-1">PHP Overview</h1>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <p>PHP is a server-side scripting language, which is used to manage dynamic web pages, databases and build websites with features like session tracking and e-commerce. On a day of 1995, Rasmus Lerdorf unleashed the first version of “Hypertext Preprocessor” also known as the PHP language. It is also integrated with several popular databases like MySQL, PostgreSQL, Microsoft SQL Server, Oracle etc.</p>
+                            
+                            <h3 class="h1">Uses of PHP</h3>
+                            <p>PHP can perform several system functions like opening files, CRUD operations on data stores, general-purpose scripting, etc. Besides system operations, there are also other uses like:</p>
+                            <ol type="a">
+                                <li>Handling Forms: PHP can handle form operations. It can gather data, save data to a file and send data through emails.</li>
+                                <li>Database Operations: PHP can also create, read, update and delete elements in your database.</li>
+                                <li>Encryption: It can perform advanced encryption and encrypt data for you.</li>
+                                <li>Dynamic Page Content: It can generate dynamic page content.</li>
+                            </ol>
+                    
+                            <h3>Basic Syntax PHP</h3>
+                            <p>A PHP script can be written anywhere inside the HTML document. A PHP script starts with &lt;?php tag and ends with ?&gt;. We can write our logic inside this tag and it will be executed accordingly.</p>
+                            <pre class="text-white bg-black">
+<code>&lt;?php
+// PHP code goes here
+?&gt;
+</code></pre>
+                    
+                            <h3>Displaying output in PHP</h3>
+                            <p>In PHP, output is displayed on the browser using echo as follows:</p>
+                            <pre class="text-white bg-black">
+<code>&lt;?php
+echo "hello";
+?&gt;
+</code></pre>
+                    
+                            <h3>Hello World</h3>
+                            <p>A basic PHP Hello World program looks something like this. We will use a built-in PHP function “echo” to output the text “Hello World!” on our webpage.</p>
+<pre class="text-white bg-black">
+<code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My first PHP page&lt;/h1&gt;
+&lt;?php
+echo "Hello World!";
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+                        </div>
+                <!-- code ends here -->
+            </div>
+        </div>
+    </div>
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

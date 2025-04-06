@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java(oops)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <%- include('../includes/subnav.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="menubox col col-2 border border-2 p-3" style="height: 600px; overflow: auto;">
+               <%- include('./phpnav.ejs')%>
+            </div>
+            <div class="col  border border-2" style="height: 600px; overflow: auto;">
+                <!-- code starts here -->
+<div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col">
+                <h1 class="h1 text-dark mb-1">Variable Scope</h1>
+            </div>
+        </div>
+        <div class="pt-2">
+            <p>The scope of the variable is the area within which the variable has been created. Based on this, a variable can either have a local scope, global scope, or static scope in PHP.</p>
+    
+            <h1>Global Variable:</h1>
+            <p>A variable which was created in the main body of the code and that can be accessed anywhere in the program is called a Global Variable. Global variables can be directly accessed or used in or outside of a function with the GLOBAL keyword before the variable. However, we can also call them without the global keyword.</p>
+            <p><strong>For Example:</strong></p>
+<pre class="bg-dark text-white p-3">
+<code>&lt;?php
+$name = "Harry Bhai";        // Global Variable
+function global_var() {
+    global $name;
+    echo "Variable inside the function: " . $name;
+    echo "&lt;/br&gt;";
+}
+global_var();
+echo "Variable outside the function: " . $name;
+?&gt;
+</code>
+</pre>
+            <p>Output:</p>
+<pre class="bg-dark text-white p-3">
+<code>Variable inside the function: Sharma Bhai
+Variable outside the function: Sharma Bhai
+</code>
+</pre>
+    
+            <h1>Local Variable:</h1>
+            <p>A local variable is created within a function and can only be used inside the function. This means that these variables cannot be accessed outside the function, as they have local scope.</p>
+            <p><strong>For Example:</strong></p>
+<pre class="bg-dark text-white p-3">
+<code>&lt;?php
+function mytest() {
+    $capital = "Delhi";
+    echo "Capital of India is: " . $capital;
+}
+mytest(); // Calling the function
+// using $capital outside the function will generate an error
+echo $capital;
+?&gt;
+</code>
+</pre>
+            <p>Output:</p>
+            <pre class="bg-dark text-white p-3"><code>Capital of India is: Delhi
+Notice: Undefined variable: capital in D:\xampp\htdocs\program\var.php on line 28</code></pre>
+    
+            <h1>Static Variable:</h1>
+            <p>PHP has a feature that deletes the variable once it has finished execution and frees the memory. When we need a local variable that can store its value even after the execution, we use the static keyword before it, and the variable is called a static variable.</p>
+            <p>These variables only exist in a local function and do not get deleted after the execution has been completed.</p>
+            <p><strong>For Example:</strong></p>
+<pre class="bg-dark text-white p-3">
+<code>&lt;?php
+function static_var() {
+    static $num1 = 3;    // static variable
+    $num2 = 6;           // Non-static variable
+    // increment in non-static variable which will increment its value to 7
+    $num1++;
+    // increment in static variable which will increment its value to 4 after first execution and 5 after second execution
+    $num2++;
+    echo "Static: " . $num1 . "&lt;/br&gt;";
+    echo "Non-static: " . $num2 . "&lt;/br&gt;";
+}
+
+// first function call
+static_var();
+// second function call
+static_var();
+?&gt;</code>
+</pre>
+            <p>Output:</p>
+<pre class="bg-dark text-white p-3">
+<code>Static: 4
+Non-static: 7
+Static: 5
+Non-static: 7
+</code>
+</pre>
+        </div>
+        
+    </div>
+</div>
+                <!-- code ends here -->
+            </div>
+        </div>
+    </div>
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

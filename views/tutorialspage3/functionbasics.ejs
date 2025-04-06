@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java(oops)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <%- include('../includes/subnav.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="menubox col col-2 border border-2 p-3" style="height: 600px; overflow: auto;">
+               <%- include('./phpnav.ejs')%>
+            </div>
+            <div class="col  border border-2" style="height: 600px; overflow: auto;">
+                <!-- code starts here -->
+<div>
+    
+        <div class="container my-5">
+            <div class="row">
+                <div class="col">
+                    <h1 class="h1 text-dark mb-4">Function Basics</h1>
+                </div>
+            </div>
+            <div class="pt-2">
+                <p>Function arguments are variables of some supported data type that are processed within the body of the function. It can take input as an argument and return value.</p>
+                <p>PHP has more than 1000 built-in functions, and in addition, you can also create your own functions.</p>
+    
+                <h3>Advantages:</h3>
+                <ol>
+                    <li>Functions reduce the complexity of a program and give it a modular structure.</li>
+                    <li>A function can be defined only once and called many times.</li>
+                    <li>It saves a lot of code writing because you don't need to write the same logic multiple times; you can write the logic once and reuse it.</li>
+                </ol>
+    
+                <p><strong>Built-in Functions:</strong> PHP has thousands of built-in functions. For a complete reference and examples, you can go to this link: <a href="https://www.php.net/manual/en/funcref.php">https://www.php.net/manual/en/funcref.php</a>.</p>
+    
+                <p><strong>User Defined Functions:</strong> Apart from built-in functions, we can also create our own functions and call them easily.</p>
+                <p>A user-defined function looks something like this:</p>
+                <pre class="bg-black text-white p-2"><code>&lt;?php
+function functionname() {
+    //Code
+}
+functionname(); // Calling Function
+?&gt;</code></pre>
+    
+                <p><strong>Note:</strong> A function name should only start with letters and underscores. It can’t start with numbers and special symbols.</p>
+    
+                <p><strong>Example:</strong></p>
+                <pre class="bg-black text-white p-2"><code>&lt;?php
+function helloMsg() {
+    echo "Hello world!";
+}
+helloMsg(); // call the function
+?&gt;</code></pre>
+            </div>
+        </div>
+
+</div>
+                <!-- code ends here -->
+            </div>
+        </div>
+    </div>
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

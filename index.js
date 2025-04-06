@@ -52,7 +52,7 @@ app.get('/tutorials',(req,res)=>{
 
 app.get('/roadmaps/roadmap',(req,res)=>{
     let {name,imagelink,width,height}=req.query;
-    console.log(req.query);
+    // console.log(req.query);
     name=name.charAt(0).toUpperCase() + name.slice(1)
     width=parseInt(width);;
     res.render("roadmapforskills.ejs",{name,imagelink,width,height});
@@ -195,5 +195,61 @@ app.get('/tutorials/polymorphisminjava',(req,res)=>{
 app.get('/tutorials/abstractioninjava',(req,res)=>{
     res.render('./tutorialspage2/abstractioninjava.ejs');
 });
+
+//php routes
+app.get('/tutorials/php',(req,res)=>{
+    res.render('./tutorialspage3/mainpage.ejs');
+});
+app.get('/tutorials/phpcomments',(req,res)=>{
+    res.render('./tutorialspage3/phpcomments.ejs');
+})
+app.get('/tutorials/phpvariables',(req,res)=>{
+    res.render('./tutorialspage3/phpvariables.ejs');
+})
+app.get('/tutorials/variablescope',(req,res)=>{
+    res.render('./tutorialspage3/variablescope.ejs');
+})
+app.get('/tutorials/phpdatatypes',(req,res)=>{
+    res.render('./tutorialspage3/phpdatatypes.ejs');
+})
+app.get('/tutorials/phpoperators',(req,res)=>{
+    res.render('./tutorialspage3/phpoperators.ejs');
+})
+app.get('/tutorials/conditonalstatements',(req,res)=>{
+    res.render('./tutorialspage3/conditonalstatements.ejs');
+})
+app.get('/tutorials/iterativestatements',(req,res)=>{
+    res.render('./tutorialspage3/iterativestatements.ejs');
+})
+app.get('/tutorials/functionbasics',(req,res)=>{
+    res.render('./tutorialspage3/functionbasics.ejs');
+})
+app.get('/tutorials/functionarguments',(req,res)=>{
+    res.render('./tutorialspage3/functionarguments.ejs');
+})
+app.get('/tutorials/superglobals',(req,res)=>{
+    res.render('./tutorialspage3/superglobals.ejs');
+})
+app.get('/tutorials/globals',(req,res)=>{
+    res.render('./tutorialspage3/globals.ejs');
+})
+app.get('/tutorials/server',(req,res)=>{
+    res.render('./tutorialspage3/server.ejs');
+})
+app.get('/tutorials/request',(req,res)=>{
+    res.render('./tutorialspage3/request.ejs');
+})
+app.get('/tutorials/post',(req,res)=>{
+    res.render('./tutorialspage3/post.ejs');
+})
+app.get('/tutorials/get',(req,res)=>{
+    res.render('./tutorialspage3/get.ejs');
+})
+app.get('/tutorials/cookie',(req,res)=>{
+    res.render('./tutorialspage3/cookie.ejs');
+})
+app.get('/tutorials/session',(req,res)=>{
+    res.render('./tutorialspage3/session.ejs');
+})
 
 
