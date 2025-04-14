@@ -252,4 +252,9 @@ app.get('/tutorials/session',(req,res)=>{
     res.render('./tutorialspage3/session.ejs');
 })
 
+//quizzes
+app.get('/quizzes',(req,res)=>{
+    res.render('./quizzes/quizzes.ejs');
+})
+
 
